@@ -3,6 +3,11 @@
 
 ## Config
 - port `8080` is exposed
+- env `$USERNAME` defaults to none
+- env `$PASSWORD` defaults to none
+- volume `/wiki/data` is where the data is stored
+- volume `/wiki/plugins` for plugins
+- volume `/wiki/themes` for themes
 
 ## Usage
 - `make build` will build the image

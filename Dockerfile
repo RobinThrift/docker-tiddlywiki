@@ -1,16 +1,22 @@
 # vim:set ft=dockerfile:
 FROM node:argon
 
-RUN npm i -g tiddlywiki
-
-RUN mkdir /tiddlywiki
-WORKDIR /tiddlywiki
-RUN tiddlywiki wiki
-VOLUME /tiddlywiki/wiki
+RUN mkdir /wiki
+RUN mkdir /wiki/data
+RUN mkdir /wiki/themes
+RUN mkdir /wiki/plugins
+WORKDIR /wiki
+RUN npm i tiddlywiki
+COPY start.sh .
+VOLUME /wiki/data
+VOLUME /wiki/plugins
+VOLUME /wiki/themes
 
 ENV USERNAME ""
 ENV PASSWORD ""
 ENV PATH ""
+ENV TIDDLYWIKI_PLUGIN_PATH "/wiki/plugins"
+ENV TIDDLYWIKI_THEME_PATH "/wiki/themes"
 EXPOSE 8080
 
-CMD ["tiddlywiki", "wiki", "--server", "$:/core/save/all", "text/plain", "text/html", "$USERNAME", "$PASSWORD", "0.0.0.0", "$PATH"]
+CMD start.sh
