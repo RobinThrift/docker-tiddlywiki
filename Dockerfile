@@ -19,4 +19,4 @@ ENV TIDDLYWIKI_PLUGIN_PATH "/wiki/plugins"
 ENV TIDDLYWIKI_THEME_PATH "/wiki/themes"
 EXPOSE 8080
 
-CMD start.sh
+CMD ./start.sh
