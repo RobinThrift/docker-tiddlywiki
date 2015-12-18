@@ -1,5 +1,5 @@
 DOCKER_IMAGE_VERSION=5.1.9
-DOCKER_IMAGE_NAME=robinthrift/docker-tiddlywiki
+DOCKER_IMAGE_NAME=robinthrift/tiddlywiki
 DOCKER_IMAGE_TAGNAME=$(DOCKER_IMAGE_NAME):$(DOCKER_IMAGE_VERSION)
 
 default: build
