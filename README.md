@@ -1,5 +1,5 @@
 # Tiddly Wiki
-[Tiddly Wiki](https://github.com/Jermolene/TiddlyWiki5) for Raspian built on the Raspberry Pi 2.
+[Tiddly Wiki](https://github.com/Jermolene/TiddlyWiki5) using Docker.
 
 ## Config
 - port `8080` is exposed
